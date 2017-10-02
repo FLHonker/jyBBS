@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to jyBBS</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <h1>Welcome to jyBBS</h1>
+
+            <form name='form' class="loginForm" method='post' action='../login/login.php' onSubmit="return check()">
+                <input type="text" placeholder="Username" name='UName'>
+                <input type="password" placeholder="Password" name='UPassword'>
+                <button type="submit" id="login-button" name='login' value='login'>Login</button>
+                <button type="button" id="register-button" onClick="location.href='register.php'">Register</button>
+            </form>
+        </div>
+        <ul class="bg-bubbles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+</body>
+</html>

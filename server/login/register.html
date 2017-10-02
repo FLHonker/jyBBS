@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Our jyBBS Register</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript">
+/*
+        $("#register-button").click(function(event){
+            event.preventDefault();
+
+            $('regForm').fadeOut(500);
+            $('.wrapper').addClass('form-success');
+        });
+*/
+        //验证信息填写是否有误
+        function check()
+        {
+            if(regForm.UName.value.length<6 || regForm.UName.value.length>16)
+            {
+                alert('用户名不合法！请输入6-16位用户名');
+                regForm.UName.focus();
+                return false;
+            }
+            if(regForm.UPassword.value.length<6 ||regForm.UPassword2.value.length>16)
+            {
+                alert('密码不合法！请输入6-16位密码');
+                regForm.UName.focus();
+                return false;
+            }
+            if(regForm.UPassword.value != regForm.UPassword2.value)		//判断两次输入的密码是否一致
+            {
+                alert("两次输入的密码不一致！");
+                regForm.UPassword.focus();
+                return false;
+            }
+        }
+    </script>
+</head>
+<body>
+<div class="wrapper">
+    <div class="container" style="padding-top: 150px">
+        <h1>Our jyBBS Register</h1>
+
+        <form name='regForm' class="regForm" action='../login/register.php' method='post'>
+            <input type="text" placeholder="Username" name='UName'>
+            <input type="password" placeholder="Password" name='UPassword'>
+            <input type="password" placeholder="Reconfirm Your Password" name='UPassword2'>
+            <input type="text" placeholder="Your Phonenumber" name='UPhonenumber'>
+            <button type="button" id="login-button" class="cc" onClick="window.location.reload('login.php')">Login</button>
+            <button type="submit" id="register-button" value='submit' name='register' onClick="check()">Register</button>
+        </form>
+    </div>
+
+    <ul class="bg-bubbles">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</div>
+</body>
+</html>
